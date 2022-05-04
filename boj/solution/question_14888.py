@@ -25,13 +25,10 @@ def backtracking(result, count):
             elif i == 2:
                 backtracking(result * n_list[count+1], count+1)
             elif i == 3:
-                backtracking(result / n_list[count+1], count+1)
-
-
+                backtracking(int(result / n_list[count+1]), count+1)
             oper_list[i] += 1
-    
 
 backtracking(n_list[0], 0)
 
-print(int(min_cal))
+print(int(max_cal))
 print(int(min_cal))
