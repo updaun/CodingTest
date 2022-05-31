@@ -1,10 +1,8 @@
 import sys
 N, K = list(map(int, sys.stdin.readline().split()))
-
-# 시간 초과
-n_list = list(map(int, sys.stdin.readline().split()))
-target_list = []
-for i in range(N-K):
-    target_list.append(sum(n_list[i:i+K]))
-print(max(target_list))
-    
+temp_list = list(map(int, sys.stdin.readline().split()))
+k_day_list = [sum(temp_list[:K])]
+for i in range(1, N-K+1):
+    sum_k = k_day_list[-1] + temp_list[i+K-1] - temp_list[i-1]
+    k_day_list.append(sum_k)
+print(max(k_day_list))
