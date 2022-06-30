@@ -2,8 +2,8 @@ import sys
 
 n = int(sys.stdin.readline())
 table = []
-team1 = [0]*n
-team2 = [0]*n
+team1 = [0]*int(n/2)
+team2 = [0]*int(n/2)
 pick = [0]*n
 answer = sys.maxsize
 
@@ -13,11 +13,11 @@ def update():
     team2_size = 0
     for i in range(n):
         if pick[i] == 0:
-            team1_size += 1
             team1[team1_size] = i
+            team1_size += 1
         else:
-            team2_size += 1
             team2[team2_size] = i
+            team2_size += 1
     sum_1 = 0
     sum_2 = 0
     for i in range(int(n/2)):
@@ -28,7 +28,6 @@ def update():
         answer = abs(sum_1 - sum_2)
 
 def dfs(cur, pick_count):
-    global answer
     if pick_count == n/2:
         update()
         return None
