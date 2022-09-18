@@ -1,3 +1,20 @@
+# list comprehension 적용 속도 개선
+# 308ms
+import sys
+input = sys.stdin.readline
+n =  int(input())
+m_list = [list(map(int, input().split())) for _ in range(n)]
+m_list = sorted(m_list, key=lambda x:(x[1], x[0]))
+count = 1
+now = m_list[0][1]
+for i in range(1, n):
+    if m_list[i][0] >= now:
+        count += 1
+        now = m_list[i][1]
+print(count)
+
+# 옛날 풀이
+# 328ms
 import sys
 n = int(sys.stdin.readline())
 schedules = []
