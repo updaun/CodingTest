@@ -1,4 +1,5 @@
 # 2022 Winter Coding - 겨울방학 스타트업 인턴 프로그램
+# abbbbccc -> ab*c*
 def solution(line):
     trigger = False
     temp = ''
