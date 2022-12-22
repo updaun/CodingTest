@@ -17,3 +17,21 @@ def solution(n, m):
 
 print(solution(3, 12)) # [3, 12]
 print(solution(2, 5)) # [1, 10]
+
+
+# https://codingpractices.tistory.com/34 참고
+def solution(n, m):
+    a, b = min(n, m), max(n, m)
+    x, y = a, b
+    answer = []
+    # 최대공약수
+    while y:
+        x, y = y, x%y
+    answer.append(x)
+    # 최소공배수
+    answer.append((a*b)//x)
+    return answer
+
+
+print(solution(3, 12)) # [3, 12]
+print(solution(2, 5)) # [1, 10]
