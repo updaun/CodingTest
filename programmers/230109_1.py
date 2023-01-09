@@ -30,6 +30,27 @@ def solution(s):
     answer.append(sorted_temp_list[-1].pop())
     return answer[::-1]
 
+# 깔끔한 다른 사람 풀이
+# 출처 - https://covenant.tistory.com/157
+def solution(S):
+    S = S[2:-2].split("},{")
+    numArr = []
+    for i in range(len(S)):
+        s = S[i].split(",")
+        numArr.append(set(s))
+ 
+    numArr.sort(key=lambda x: len(x))
+ 
+    ans = set()
+    res = []
+    for a in numArr:
+        tmp = a - ans
+        res.append(list(tmp)[0])
+        ans = ans | tmp
+ 
+    res = [int(i) for i in res]
+    return res
+
 print(solution("{{2},{2,1},{2,1,3},{2,1,3,4}}")) # [2, 1, 3, 4]
 print(solution("{{1,2,3},{2,1},{1,2,4,3},{2}}")) # [2, 1, 3, 4]
 print(solution("{{20,111},{111}}")) # 	[111, 20]
