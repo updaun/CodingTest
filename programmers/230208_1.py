@@ -1,5 +1,5 @@
 # 프로그래머스
-# 코딩테스트 연습 > 힙(Heap) > 더 맵게
+# 코딩테스트 연습 > 연습문제 > 숫자 짝꿍
 
 # 시간초과
 from collections import Counter
