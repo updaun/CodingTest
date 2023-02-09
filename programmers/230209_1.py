@@ -19,3 +19,6 @@ def solution(number, limit, power):
         v = get_divisor(i, limit, power)
         answer.append(v)
     return sum(answer)
+
+print(solution(5, 3, 2)) # 10
+print(solution(10, 3, 2)) # 21
