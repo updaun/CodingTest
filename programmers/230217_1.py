@@ -2,11 +2,10 @@
 # 코딩테스트 연습 > 2018 KAKAO BLIND RECRUITMENT > [3차] n진수 게임
 # https://school.programmers.co.kr/learn/courses/30/lessons/17687
 
-from collections import deque
 def solution(n, t, m, p):
     answer = '0'
     temp = 1
-    remain = {10:"A", 11:"B", 12:"C", 13:"D", 14:"E", 15:"F"}
+    remain = {10: "A", 11: "B", 12: "C", 13: "D", 14: "E", 15: "F"}
     while len(answer) <= t*m:
         s = temp
         s_str = ""
@@ -25,6 +24,7 @@ def solution(n, t, m, p):
             break
     return result
 
-print(solution(2, 4, 2, 1)) # "0111"
-print(solution(16, 16, 2, 1)) # "02468ACE11111111"
+
+print(solution(2, 4, 2, 1))  # "0111"
+print(solution(16, 16, 2, 1))  # "02468ACE11111111"
 print(solution(16, 16, 2, 2))  # "13579BDF01234567"
