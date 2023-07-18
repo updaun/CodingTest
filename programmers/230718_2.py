@@ -17,6 +17,15 @@ def solution(numLog):
             answer += "a"
     return answer
 
+# 다른 사람의 풀이
+def solution(log):
+    res=''
+    # 딕셔너리를 활용하여 키값으로 접근
+    joystick=dict(zip([1,-1,10,-10],['w','s','d','a']))
+    for i in range(1,len(log)):
+        res+=joystick[log[i]-log[i-1]]
+    return res
+
 
 q = solution([0, 1, 0, 10, 0, 1, 0, 10, 0, -1, -2, -1])
 assert q == "wsdawsdassw", "불일치"
