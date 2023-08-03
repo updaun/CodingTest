@@ -1,6 +1,6 @@
 # 프로그래머스
 # 코딩테스트 연습 > 연습문제 > 햄버거 만들기
-# https://school.programmers.co.kr/learn/courses/30/lessons/181918
+# https://school.programmers.co.kr/learn/courses/30/lessons/133502
 
 def solution(ingredient):
     stack = []
