@@ -10,6 +10,13 @@ def solution(arr, k):
         answer += [-1] * (k-len(answer))
     return answer
 
+# Counter 없이 dict.fromkeys로 중복 제거
+def solution(arr, k):
+    answer = list(dict.fromkeys(arr))[:k]
+    if len(answer) < k:
+        answer += [-1] * (k-len(answer))
+    return answer
+
 q = solution([0, 1, 1, 2, 2, 3], 3)
 assert q == [0, 1, 2], "불일치"
 print(q)
