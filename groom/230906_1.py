@@ -1,24 +1,22 @@
 # 구름LEVEL
-# Queue
-# https://level.goorm.io/exam/175241/queue/quiz/1
-
-from collections import deque
+# Stack
+# https://level.goorm.io/exam/175240/stack/quiz/1
 
 n, k = map(int, input().split())
-q = deque(maxlen=k)
+stack = []
 for i in range(n):
 	c = input().split()
 	if c[0] == "push":
-		if len(q) < k:
-			q.append(c[1])
+		if len(stack) < k:
+			stack.append(c[1])
 		else:
 			print("Overflow")
 	else:
-		if len(q)!=0:
-			print(q.popleft())
+		if len(stack) > 0:
+			print(stack.pop())
 		else:
 			print("Underflow")
-
+			
 
 # 10 3
 # push 1
@@ -32,10 +30,10 @@ for i in range(n):
 # push 3
 # pop
 
-# 1
-# 6
 # 5
-# 4
+# 6
+# 1
+# 3
 
 # 5 3
 # pop
