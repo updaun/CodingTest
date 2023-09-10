@@ -36,7 +36,7 @@ while True:
             start[i] = t
 
     # 다시 check하여 Ball 처리
-    game = check(answer, start)
+    # game = check(answer, start)
     ball_adjusted = False
     for i, g in enumerate(game):
         if g == "b" and not ball_adjusted:
